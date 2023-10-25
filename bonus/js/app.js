@@ -29,6 +29,7 @@ createApp({
             text: name,
             done: false
            }) 
+           this.taskName = "";
         },
         isCompliteTask(done, index){
             console.log("iniziale", done)
