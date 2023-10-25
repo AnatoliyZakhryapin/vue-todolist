@@ -19,4 +19,9 @@ createApp({
             ]
         }
     },
+    methods: {
+        deleteTask(indexTask){
+            this.todos.splice(indexTask, 1)
+        }
+    }
 }).mount('#app')
