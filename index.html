@@ -41,9 +41,11 @@
             <section class="to-do-tasks">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-12" v-for="todo in todos">
                             <ul class="task">
-                                New task
+                                <div class="task-title">
+                                    {{ todo.text }}
+                                </div>
                             </ul>
                         </div>
                     </div>

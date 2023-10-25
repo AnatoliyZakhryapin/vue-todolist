@@ -13,6 +13,10 @@
     padding: 0 10px;
 }
 
+.col-12 {
+    flex-basis: 100%;
+}
+
 img {
     max-width: 100%;
 }
@@ -33,4 +37,8 @@ main {
 .task {
     background-color: white;
     padding: 10px;
+}
+
+.to-do-tasks .row {
+   gap: 10px;
 }
