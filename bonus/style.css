@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row [class^="col"] {
+    padding: 0 10px;
+}
+
+.col-12 {
+    flex-basis: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-header {
+    padding: 20px 0px;
+}
+
+main {
+    background-color: #f6f8f9;
+}
+
+.task {
+    background-color: white;
+    padding: 10px;
+}
+
+.to-do-tasks .row {
+   gap: 10px;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
