@@ -42,3 +42,7 @@ main {
 .to-do-tasks .row {
    gap: 10px;
 }
+
+.line-through {
+    text-decoration: line-through;
+}
