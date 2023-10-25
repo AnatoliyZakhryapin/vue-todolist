@@ -31,15 +31,22 @@ createApp({
            }) 
            this.taskName = "";
         },
-        isCompliteTask(done, index){
-            console.log("iniziale", done)
-            if(done === true){
-                this.todos[index].done = false;
-            } else {
-                this.todos[index].done = true;
-            }
-            console.log("finale", done)
-            return done;
+        // isCompliteTask(done, index){  
+        //     if(done === true){
+        //         this.todos[index].done = false;
+        //     } else {
+        //         this.todos[index].done = true;
+        //     }
+        // }
+        isCompliteTask(object){
+            console.log("iniziale", object)
+            object.done = !object.done;
+            // if(object.done === true){
+            //     object.done = false;
+            // } else {
+            //     object.done = true;
+            // }
+            console.log("finale", object)
         }
     }
 }).mount('#app')
