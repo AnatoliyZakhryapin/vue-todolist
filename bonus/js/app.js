@@ -29,6 +29,16 @@ createApp({
             text: name,
             done: false
            }) 
+        },
+        isCompliteTask(done, index){
+            console.log("iniziale", done)
+            if(done === true){
+                this.todos[index].done = false;
+            } else {
+                this.todos[index].done = true;
+            }
+            console.log("finale", done)
+            return done;
         }
     }
 }).mount('#app')
