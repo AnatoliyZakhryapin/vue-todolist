@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             taskName: "",
+        //    isCorrectInput: true,
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -47,6 +48,15 @@ createApp({
             //     object.done = true;
             // }
             console.log("finale", object)
-        }
-    }
+        },
+        // controllInput(){
+        //     const text = this.taskName.trim()
+        //     if( text.lenght < 5){
+        //         console.log(this.taskName.lenght)
+        //         isCorrectInput = true
+        //     } else {
+        //         isCorrectInput = false
+        //     }
+        // }
+    },
 }).mount('#app')

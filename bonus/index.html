@@ -17,31 +17,33 @@
                     <div class="col">
                         <figure class="logo">
                             <img src="./img/Logo.png" alt="Logo Todolist">
-                            ToDolist
                         </figure>
+                        <div class="logo-text">
+                            ToDolist
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
         <main>
-            <section class="to-do-menu">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                           <input type="text" v-model="taskName"  @keyup.enter="addTask(taskName)">
-                        </div>
-                        <div class="col">
-                            <button @click="addTask(taskName)">
-                                Aggiungi Task
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="to-do-tasks">
                 <div class="container">
+                    <div class="row tasks-input">
+                        <div class="col">
+                           <input placeholder="Name Task" type="text" v-model="taskName"  @keyup.enter="addTask(taskName)">
+                        </div>
+                        <div class="col">
+                            <button @click="addTask(taskName)" class="btn">
+                                New Task
+                            </button>
+                        </div>
+                        <div class="col-12" :class="taskName.replace(/\s/g, '').length < 5 ? '' : 'visibility-hiden'">
+                            <h3 class="control-messege" 
+                           >Inserire almeno 5 lettere </h3>
+                        </div>
+                    </div>
                     <div class="row" v-if="todos.length > 0" >
-                        <div class="col-12" v-for="(todo, index) in todos">
+                        <div class="col-4" v-for="(todo, index) in todos">
                             <ul class="task" @click="isCompliteTask(todo)">
                                 <div class="task-title" :class="todo.done === true ? 'line-through' : ''">
                                     {{ todo.text }}
